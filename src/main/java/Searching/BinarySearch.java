@@ -1,21 +1,23 @@
-package DataStructure;
+package Searching;
 
 public class BinarySearch {
 
     public static int search(int[] list, int target) {
 
         int left = 0;
-        int right = list.length - 1;
+        int right = list.length - 1; //This sets the search range.
 
+
+//This loop continues until the search space disappears.
         while (left <= right) {
 
-            int middle = (left + right) / 2;
+            int middle = (left + right) / 2; //finding the middle.
 
-            if (target < list[middle])       // target is too LOW — search left half
+            if (target < list[middle])       // If the target is too smaller— search left half
             {
                 right = middle - 1;
             }
-            else if (target > list[middle])  // target is too HIGH — search right half
+            else if (target > list[middle])  // If the target is too bigger — search right half
             {
                 left = middle + 1;
             }
