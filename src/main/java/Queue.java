@@ -1,5 +1,3 @@
-package Queue;
-
 public class Queue {
     // Node — same as linked list
     static class Node {

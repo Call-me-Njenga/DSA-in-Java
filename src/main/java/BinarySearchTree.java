@@ -1,5 +1,3 @@
-package Queue;
-
 public class BinarySearchTree {
     static class Node {
         int data;

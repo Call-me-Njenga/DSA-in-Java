@@ -1,5 +1,3 @@
-package Queue;
-
 public class Towerofhanoi {
     // Move n disks from 'from' rod to 'to' rod using 'aux' as helper
     // The entire algorithm is just 3 steps:
