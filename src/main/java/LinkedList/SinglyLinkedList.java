@@ -24,36 +24,36 @@ public class SinglyLinkedList {
         }
 
         Node temp = head;// Start from the beginning
-        while (temp.next != null) {
+        while (temp.next != null) {//move until the last node
             temp = temp.next;
         }
 
-        temp.next = newNode;
+        temp.next = newNode;//Attach new node at the end
     }
 
     // Add at beginning
-    void addFirst(int data) {
-        Node newNode = new Node(data);
-        newNode.next = head;
-        head = newNode;
+    void addFirst(int data) {// add node at the front
+        Node newNode = new Node(data);//create node
+        newNode.next = head;//point new node to current head
+        head = newNode;//make new node the new head
     }
 
     // Delete a node
-    void delete(int data) {
-        if (head == null) return;
+    void delete(int data) {//Remove a value from list
+        if (head == null) return;//if list is empty-do nothing
 
         if (head.data == data) {
-            head = head.next;
+            head = head.next;//if the first node matches :move head forward -deletes it
             return;
         }
 
-        Node temp = head;
-        while (temp.next != null) {
-            if (temp.next.data == data) {
-                temp.next = temp.next.next;
-                return;
+        Node temp = head;//Start from beginning
+        while (temp.next != null) {//loop through list
+            if (temp.next.data == data) {//check the next node
+                temp.next = temp.next.next;//skip that node -delete it
+                return;//stop after deleting
             }
-            temp = temp.next;
+            temp = temp.next;//move forward
         }
     }
 
